@@ -1,0 +1,8 @@
+1. Imprimindo os nós da árvore na figura ao lado, obtivemos a
+seguinte saída: <a<b<><d<><>>><c<e<><>><f<><>>>> Qual
+tipo de percurso utilizado no exemplo acima?
+
+R = Se trata de um percurso Pré Ordem, no qual para cada 
+    nó da árvore é tratado a raiz, e em seguida é feito a 
+    visita na "folha" a esquerda, após isso é feito a visita 
+    na folha da direita.
