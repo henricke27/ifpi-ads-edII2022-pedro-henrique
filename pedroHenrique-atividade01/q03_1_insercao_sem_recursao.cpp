@@ -48,7 +48,7 @@ class Arvore {
 			}			
 		}
 		
-		void insert(T el){ // 4.1 Insercao sem recursao
+		void insert(T el){ // 3.1 Insercao sem recursao
 			ArvoreNo<T> *p=root, *prev=0;
 			while(p!=0){
 				prev=p;
