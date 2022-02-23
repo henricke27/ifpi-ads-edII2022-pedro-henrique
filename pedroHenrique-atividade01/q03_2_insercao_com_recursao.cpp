@@ -50,7 +50,7 @@ class Arvore {
 			
 		}
 		
-		void insert(ArvoreNo<T> *no, T el){ // 4.2 Insercao com recursao
+		void insert(ArvoreNo<T> *no, T el){ // 3.2 Insercao com recursao
 			if(root == 0){
 				root = new ArvoreNo<T>(el);	
 			}else{
