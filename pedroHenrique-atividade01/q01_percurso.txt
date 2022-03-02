@@ -4,5 +4,5 @@ tipo de percurso utilizado no exemplo acima?
 
 R = Se trata de um percurso Pré Ordem, no qual para cada 
     nó da árvore é tratado a raiz, e em seguida é feito a 
-    visita na "folha" a esquerda, após isso é feito a visita 
-    na folha da direita.
+    visita na sub-árvore a esquerda, após isso é feito a visita 
+    na sub-árvore da direita.
