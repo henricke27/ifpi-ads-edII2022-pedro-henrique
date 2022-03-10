@@ -1,0 +1,7 @@
+2. Verifique o tempo de execução de cada um dos algoritmos nas duas versões e confira se
+realmente o uso da pilha auxiliar ao invés do uso da recursão otimizou o algoritmo gastando
+menos tempo de processamento.
+Existe melhoria de eficiência do algoritmo?
+
+R= Sim. O ganho de performace é cada vez mais perceptível conforme aumenta a quantidade de
+dados em atividade entre as duas versões. 
