@@ -62,7 +62,6 @@ class Arvore {
 			}		
 		}*/
 		
-		//Não consegui implementar o percurso
 		void preOrdem(){
 			ArvoreNo<T> *p = root;
 			ArvoreNo<T> *tmp = root;
@@ -134,7 +133,6 @@ int main(){
  	a->inserir(41);
  	a->inserir(67);
  	a->inserir(72);
- 	a->inserir(8);
  	a->inserir(7);
  	a->inserir(9);
  	a->inserir(6);
