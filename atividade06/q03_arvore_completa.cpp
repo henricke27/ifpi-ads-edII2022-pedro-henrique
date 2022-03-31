@@ -36,7 +36,7 @@ class Arvore {
  			root=0;
 		}
 		
-		bool eh_completa(){ //q04
+		bool eh_completa(){ //q03
 			int h_min = 1+(log(quantidadeDeNos()) / log(2));
 			int h_max = altura(root);
 			
@@ -120,7 +120,7 @@ int main(){
  	a->insert(31); 
  	a->insert(29);
 
-	cout<<a->eh_completa()<<endl; //1; árvore completa
+	cout<<a->eh_completa()<<endl; //1; Ã¡rvore completa
 
  	return 0;
 }
