@@ -19,7 +19,7 @@ int main(){
 	a->preOrdem(a->root);	*/
  	
 /*	a->findAndDeleteByMerging(25); 
- 	a->percursoExtensao();	*/ 
+ 	a->preOrdem(a->root);	*/
  	
 /* 	a->findAndDeleteByCopying(a->root->right); 
  	a->preOrdem(a->root);	*/
@@ -29,7 +29,7 @@ int main(){
 //		<13<10<2<><>><11<><>>><>>;
 
 //	2 - Remoção por fusão: 
-//  	13 - 10 - lixo - 2 - 11 - lixo - 26 - lixo - lixo - lixo; (percurso em extesão)
+//  	<13<10<2<><>><11<><>>><20<18<><>><24<><26<><>>>>>;
 
 //  3 - Remoção por cópia: 
 //		<13<10<2<><>><11<><>>><24<20<18<><>><>><26<><>>>>;
