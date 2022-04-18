@@ -18,8 +18,8 @@ int main(){
 /*	a->remocaoSimples(25); 
 	a->preOrdem(a->root);	*/
  	
-/* 	a->findAndDeleteByMerging(25); 
- 	a->percursoExtensao();	*/
+/*	a->findAndDeleteByMerging(25); 
+ 	a->percursoExtensao();	*/ 
  	
 /* 	a->findAndDeleteByCopying(a->root->right); 
  	a->preOrdem(a->root);	*/

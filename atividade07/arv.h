@@ -190,7 +190,7 @@ class Arvore {
 			}
 		}
 		
-		void deleteByMerging(ArvoreNo<T> *no){ // 2
+		void deleteByMerging(ArvoreNo<T> *prev, ArvoreNo<T> *no){ // 2
 			ArvoreNo<T> *tmp;
 			if(no!=0){
 				if(!no->right){
@@ -202,9 +202,14 @@ class Arvore {
 					while(tmp->right!=0){
 						tmp = tmp->right;
 					}
+					//cout<<"aqui:"<<tmp->el<<endl;
 					tmp->right=no->right;
+					if(prev->el < no->el){
+						prev->right = no->left;
+					}else{
+						prev->left = no->left;
+					}
 					tmp = no;
-					no = no->left;
 				}
 				delete tmp;
 			}	
@@ -225,12 +230,12 @@ class Arvore {
 			}
 			if(no!=0 && no->el==el){
 				if(no==root){
-					deleteByMerging(root);
+					deleteByMerging(prev,root);
 				}else {
 					if(prev->left==no){
-						deleteByMerging(prev->left);
+						deleteByMerging(prev,prev->left);
 					}else{
-						deleteByMerging(prev->right);
+						deleteByMerging(prev,prev->right);
 					}
 				}
 			}
