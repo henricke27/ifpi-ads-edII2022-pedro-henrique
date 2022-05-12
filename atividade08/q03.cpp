@@ -84,15 +84,11 @@ class Arvore {
 int main(){
  		
  	Arvore<int> *a = new Arvore<int>();
- 	a->insert(13);
-	a->insert(10);
- 	a->insert(25);
- 	a->insert(2);
- 	a->insert(11);
+ 	a->insert(15);
+	a->insert(4);
  	a->insert(20);
- 	a->insert(26);
- 	a->insert(18);
- 	a->insert(24);
+ 	a->insert(17);
+ 	a->insert(19);
  	
  	a->algoritmoMorris();
  	
