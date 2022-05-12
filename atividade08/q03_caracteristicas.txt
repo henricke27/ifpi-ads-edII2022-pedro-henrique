@@ -1,0 +1,4 @@
+3) Características do algorítimo
+- Não necessita do uso de uma pilha;
+- É feito mudanças na estrutura da árvore durante o percurso;
+- O desempenho do algorítimo varia conforme o número de filhos à esquerda da árvore.
