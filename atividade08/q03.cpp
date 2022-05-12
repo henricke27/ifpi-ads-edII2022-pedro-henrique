@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <queue>
 
 using namespace std;
 
@@ -6,17 +8,14 @@ template<class T>
 class ArvoreNo{
  	public:
  		T el;
- 		int sucessor;
  		ArvoreNo<T> *left, *right;
  		ArvoreNo(){
  			left=right=0;	
- 			sucessor = 0;
 		}
 		ArvoreNo(T e, ArvoreNo<T> *l=0, ArvoreNo<T> *r=0){
 			el=e;
 			left = l;
 			right = r;
-			sucessor = 0;
 		}
  };
 
@@ -36,7 +35,7 @@ class Arvore {
  			root=0;
 		}
 			
-		void morris(){ //q03
+		void algoritmoMorris(){ 
 			ArvoreNo<T> *p = root;
 			ArvoreNo<T> *tmp;
 			
@@ -58,76 +57,44 @@ class Arvore {
 						p = p->right;
 					}
 				}
-			}		
+			}	
 		}
 		
-		void inOrdem(){
-			ArvoreNo<T> *prev, *p = root;
-			if(p!=0){
-				while(p->left != 0){
-					p = p->left;
-				}
-				while(p!=0){
-					cout<<p->el<<endl;
-					prev = p;
-					p = p->right;
-					if(p!=0 && prev->sucessor == 0){
-						while(p->left != 0){
-							p = p->left;
-						}
-					}
-				}
-			}
-		}
-		
-		void inserir(T el){ 
-			ArvoreNo<T> *p=root;
-			ArvoreNo<T> *prev=0;
-			
-			if(root==0){
-				root = new ArvoreNo<T>(el); 
-				return;
-			}
-		
+		void insert(T el){ 
+			ArvoreNo<T> *p=root, *prev=0;
 			while(p!=0){
 				prev=p;
-				if(p->el > el){
+				if(el<p->el){
 					p=p->left;
-				}else if(p->sucessor == 0){
-					p=p->right;
 				}else{
-					break;
+					p=p->right;
 				}
 			}
-			
-			ArvoreNo<int> *novo = new ArvoreNo<int>(el);
-			if(prev->el > el){
-				prev->left = novo;
-				novo->sucessor = 1;
-				novo->right = prev;
-			}
-			else if(prev->sucessor==1){
-				novo->sucessor = 1;
-				prev->sucessor = 0;
-				novo->right = prev->right;
-				prev->right = novo;
-					
+			if(root==0){
+				root = new ArvoreNo<T>(el); 
+			}else if(el < prev->el){
+				prev->left=new ArvoreNo<T>(el);
 			}else{
-				prev->right = novo;
+				prev->right=new ArvoreNo<T>(el);
 			}
 		}
+	
  };
 
 int main(){
-	Arvore<int> *a = new Arvore<int>();
-	
-	a->inserir(15);
-	a->inserir(4);
- 	a->inserir(20);
- 	a->inserir(17);
- 	a->inserir(19);
+ 		
+ 	Arvore<int> *a = new Arvore<int>();
+ 	a->insert(13);
+	a->insert(10);
+ 	a->insert(25);
+ 	a->insert(2);
+ 	a->insert(11);
+ 	a->insert(20);
+ 	a->insert(26);
+ 	a->insert(18);
+ 	a->insert(24);
  	
- 	a->morris();
+ 	a->algoritmoMorris();
  	
  	return 0;
 }
