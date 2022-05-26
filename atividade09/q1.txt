@@ -1,0 +1,10 @@
+1.1 A altura do lado esquerdo é de apenas 2. Enquanto a altura do lado direito é 4.
+
+1.2 Árvore resultante: <7<6<><>><22<14<><>><40<63<><>><>>>> -> Pré-Ordem
+
+1.3 A árvore está desbalanceada, pois a diferença de altura entre as subárvores
+direita e esquerda é de 2.
+
+
+
+
